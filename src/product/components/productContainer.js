@@ -26,6 +26,7 @@ export const ProductContainer = ({storeAddCart}) => {
                   name={product.name}
                   description={product.description}
                   price={product.price}
+                  obsoleted={product.obsoleted}
                   onAddToCartClick={storeAddCart}
                 />
               </div>

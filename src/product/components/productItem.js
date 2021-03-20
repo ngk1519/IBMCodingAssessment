@@ -1,11 +1,11 @@
 import {useState} from 'react';
 
-export const ProductItem = ({ id, name, description, price, onAddToCartClick }) => {
+export const ProductItem = ({ id, name, description, price, onAddToCartClick, obsoleted }) => {
 
   const [showAdded, setShowAdded] = useState(true);
 
   const handleOnClick = () => {
-    onAddToCartClick({id:id, name:name,description:description,price:price});
+    onAddToCartClick({id:id, name:name, description:description, price:price, obsoleted:obsoleted});
     setShowAdded(false);
     setTimeout(function () {
       setShowAdded(true);
